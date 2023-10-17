@@ -11,6 +11,7 @@
 		21AC84AF2ADEAE9A001AF3AC /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21AC84AE2ADEAE9A001AF3AC /* ContentView.swift */; };
 		21AC84B12ADEAE9D001AF3AC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 21AC84B02ADEAE9D001AF3AC /* Assets.xcassets */; };
 		21AC84B42ADEAE9D001AF3AC /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 21AC84B32ADEAE9D001AF3AC /* Preview Assets.xcassets */; };
+		21AC84BD2ADEAF53001AF3AC /* LoadingRectangle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21AC84BC2ADEAF53001AF3AC /* LoadingRectangle.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +20,7 @@
 		21AC84AE2ADEAE9A001AF3AC /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		21AC84B02ADEAE9D001AF3AC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		21AC84B32ADEAE9D001AF3AC /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		21AC84BC2ADEAF53001AF3AC /* LoadingRectangle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingRectangle.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +56,7 @@
 				21AC84AC2ADEAE9A001AF3AC /* InstagramStoryApp.swift */,
 				21AC84AE2ADEAE9A001AF3AC /* ContentView.swift */,
 				21AC84B02ADEAE9D001AF3AC /* Assets.xcassets */,
+				21AC84BC2ADEAF53001AF3AC /* LoadingRectangle.swift */,
 				21AC84B22ADEAE9D001AF3AC /* Preview Content */,
 			);
 			path = InstagramStory;
@@ -138,6 +141,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				21AC84AF2ADEAE9A001AF3AC /* ContentView.swift in Sources */,
+				21AC84BD2ADEAF53001AF3AC /* LoadingRectangle.swift in Sources */,
 				21AC84AD2ADEAE9A001AF3AC /* InstagramStoryApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
