@@ -39,6 +39,9 @@ struct ContentView: View {
             //When our ContentView appears, we will make a call to the start() function to start receiving values from the TimerPublisher. Each time a new value is received, we update the progress variable that is published by our StoryTimer class. This in turn triggers our ContentView to update our LoadingRectangle with the correct progress and displays the correct image on the screen.
             .onAppear { self.storyTimer.start() }
             .onDisappear {self.storyTimer.cancel() }
+            .onTapGesture {
+                self.storyTimer.advance(by: 1)
+            }
         }
     }
 }

@@ -10,16 +10,20 @@ import Combine
 
 struct LoadingRectangle: View {
     var progress: CGFloat = 0
+    
+    var staticRectangleColor: Color = Color.white.opacity(0.9)
+    var animatingRectangleColor: Color = Color.white.opacity(0.3)
+    
     var body: some View {
         GeometryReader { geometry in
            ZStack(alignment: .leading) {
                Rectangle()
-                   .foregroundColor(Color.white.opacity(0.3))
+                   .foregroundColor(animatingRectangleColor)
                    .cornerRadius(5)
 
                Rectangle()
                    .frame(width: geometry.size.width * self.progress, height: nil, alignment: .leading)
-                   .foregroundColor(Color.white.opacity(0.9))
+                   .foregroundColor(staticRectangleColor)
                    .cornerRadius(5)
            }
        }
@@ -27,7 +31,12 @@ struct LoadingRectangle: View {
 }
 
 #Preview {
-    LoadingRectangle()
+    VStack {
+        LoadingRectangle(progress: 0.5, staticRectangleColor: .red.opacity(0.9), animatingRectangleColor: .yellow)
+            .frame(width: nil, height: 2, alignment: .leading)
+        
+    }
+    
 }
 
 class StoryTimer: ObservableObject {
@@ -56,5 +65,10 @@ class StoryTimer: ObservableObject {
     
     func cancel() {
         self.cancellable?.cancel()
+    }
+    
+    func advance(by number: Int) {
+        let newProgress = Swift.max((Int(self.progress) + number) % self.max , 0)
+        self.progress = Double(newProgress)
     }
 }
